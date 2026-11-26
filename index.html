@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Aplikasi Web Cuaca</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand-group">
+      <div class="brand-logo">CUACA</div>
+      <div>
+        <div class="brand-title">Portal Informasi Cuaca REST Client</div>
+        <div class="brand-subtitle">Cepat, Tepat, Akurat, dan Mudah Dipahami • Sumber: Open-Meteo API</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Beranda</a>
+      <a href="prakiraan.html">Prakiraan 7 Hari</a>
+      <a href="bandingkan.html">Bandingkan Kota</a>
+      <a href="about.html">Tentang</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+    <div class="search-wrapper">
+      <form id="form-beranda" class="search-form">
+        <input type="text" id="input-kota-beranda" placeholder="Cek kondisi cuaca di lokasi yang Anda inginkan! (Contoh: Kediri, Malang, Jakarta)" required />
+        <button type="submit">Cari Lokasi</button>
+      </form>
+
+      <div class="location-header">
+        <button type="button" id="btn-lokasi-awal" class="btn-link-reset">Kembali ke lokasi awal (Kediri)</button>
+        <div id="info-lokasi-utama" class="location-title">Memuat lokasi...</div>
+        <div id="info-koordinat-utama" class="location-sub"></div>
+      </div>
+    </div>
+
+    <div id="pesan-beranda"></div>
+
+    <div id="konten-beranda"></div>
+
+    <section style="margin-top: 26px;">
+      <div class="section-bar">
+        <h2>📈 PRAKIRAAN CUACA HARIAN</h2>
+        <a href="bandingkan.html" class="btn-cyan">Bandingkan Lokasi Cuaca →</a>
+      </div>
+      <div id="preview-prakiraan" class="cards-grid"></div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/beranda.js"></script>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-emblem">CUACA</div>
+
+      <div class="footer-col">
+        <h4>Tentang</h4>
+        <div class="footer-underline"></div>
+        <a href="about.html" class="footer-link-blue">Portal Informasi Cuaca (REST Client)</a>
+        <p class="footer-desc">
+          Aplikasi web REST Client yang mengonsumsi data cuaca dari Open-Meteo API pada katalog public-apis untuk menampilkan informasi cuaca dan prakiraan harian[cite: 1, 2, 4].
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Cuaca</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="prakiraan.html">Prakiraan 7 Hari</a></li>
+          <li><a href="bandingkan.html">Bandingkan Kota</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Eksplorasi</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Tentang Tim</a></li>
+          <li><a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener">Katalog Public APIs[cite: 1]</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Fitur</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Cuaca Saat Ini</a></li>
+          <li><a href="prakiraan.html">Prakiraan Harian</a></li>
+          <li><a href="bandingkan.html">Perbandingan Kota</a></li>
+          <li><a href="about.html">Dokumentasi API</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bagikan Ke</h4>
+        <div class="footer-underline"></div>
+        <div class="footer-share-icons">
+          <a href="index.html" class="share-btn" title="Web">W</a>
+          <a href="prakiraan.html" class="share-btn" title="Prakiraan">P</a>
+          <a href="bandingkan.html" class="share-btn" title="Bandingkan">B</a>
+          <a href="about.html" class="share-btn" title="Tentang">T</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 - Aplikasi Web Cuaca REST Client (Kelompok 4)[cite: 2, 7]
+    </div>
+  </footer>
+
+</body>
+</html>
